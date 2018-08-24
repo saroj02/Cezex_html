@@ -1,0 +1,51 @@
+<nav class="navbar navbar-expand-md top_nav fixed-top">
+  <div class="container">
+    <a class="navbar-brand logo" href="#"></a>
+    <button class="navbar-toggler collapsed" type="button" (click)="isCollapsed = !isCollapsed" aria-expanded="false">
+      <span class="navbar-toggler-icon"><i class="fa fa-navicon"></i></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarsExample02" [class.collapse]="isCollapsed">
+      <ul class="navbar-nav mr-auto left_nav">
+        <li class="nav-item active">
+          <div class="custom_slct">
+            <select>
+              <option value="1">English</option>
+              <option value="2">Hindi</option>
+              <option value="3">Urdu</option>
+              <option value="4">Punjabi</option>
+              <option value="5">Japanise</option>
+            </select>
+          </div>  
+          <!-- <div class="btn-group" dropdown>
+            <button id="button-basic" dropdownToggle type="button" class="dropdown-toggle" aria-controls="dropdown-basic">
+              English <span class="caret"></span>
+            </button>
+            <ul id="dropdown-basic" *dropdownMenu class="dropdown-menu"
+                role="menu" aria-labelledby="button-basic">
+              <li role="menuitem"><a class="dropdown-item" href="javascript:void(0)">Hindi</a></li>
+              <li role="menuitem"><a class="dropdown-item" href="javascript:void(0)">Urdu</a></li>
+              <li role="menuitem"><a class="dropdown-item" href="javascript:void(0)">Punjabi</a></li>
+              <li role="menuitem"><a class="dropdown-item" href="javascript:void(0)">Japanise</a>
+              </li>
+            </ul>
+          </div> -->
+        </li>
+      </ul>
+      <ul class="my-2 my-md-0 right_nav">
+        <li class="nav-item">
+          <a class="nav-link" href="javascript:void(0)">Funds </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="javascript:void(0)">Support</a>
+        </li>
+        <li class="nav-item login">
+          <a class="nav-link blue_btn" href="javascript:void(0)">Login</a>
+        </li>
+        <li class="nav-item signup">
+          <a class="nav-link" href="javascript:void(0)">Sign up</a>
+        </li>
+      </ul>
+    </div>
+  </div> <!--/.container-->
+</nav> <!--/.nav-->

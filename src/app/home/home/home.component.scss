@@ -1,0 +1,582 @@
+@import '../../../assets/scss/main.scss';
+@import "~owl.carousel/dist/assets/owl.carousel.css";
+@import "~owl.carousel/dist/assets/owl.theme.default.css";
+.banner {
+    background-image: url('../../../assets/images/banner_img.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 215px 0px;
+    @include breakpoint(small) {
+        padding: 150px 0px 100px 0px;
+    }
+    h1 {
+        color: $white;
+        font-size: 36px;
+        font-weight: 400;
+        @include breakpoint(small) {
+            font-size: 30px;
+        }
+        @include breakpoint(x-small) {
+            font-size: 24px;
+            margin-bottom: 5px;
+        }
+    }
+    p {
+        color: $white;
+        font-size: 18px;
+        font-weight: 400;    
+        line-height: 20px;
+        margin-bottom: 18px;
+        @include breakpoint(small) {
+            font-size: 16px;
+        }
+        @include breakpoint(x-small) {
+            font-size: 14px;
+            line-height: 17px;
+        }
+    }
+    .get_started {
+        background-color: $base;
+        color: $white;
+        font-size: 23px;
+        text-align: center;
+        @include border-radius(100px);
+        padding: 10px 40px;
+        display: inline-block;
+        text-decoration: none;
+        border: solid 1px $base;
+        @include transition(all ease 0.4s);
+        @include breakpoint(small) {
+            font-size: 20px;
+            padding: 8px 40px;
+        }
+        @include breakpoint(x-small) {
+            font-size: 16px;
+        }
+        &:hover, &:focus, &:active {
+            border: solid 1px $white;
+            background-color: $white;
+            color: $base;
+            @include transition(all ease 0.4s);
+        }
+    }
+}
+
+.whitepaper {
+    background-color: $white;
+    padding: 35px 15px;
+    .about_buy_sell {
+        .whitepaper_vdo {
+            width: 50%;
+            @include breakpoint(small) {
+                width: 100%;
+                float: left;
+                display: block;
+            }
+            img {
+                position: relative;                
+                &:hover, &:focus, &:active {
+                    cursor: pointer;
+                }
+            }
+        }
+        .whitepaper_info {
+            max-width: 600px;
+            width: 50%;
+            @include breakpoint(small) {
+                width: 100%;
+                max-width: 100%;
+                float: left;
+                display: block;
+                text-align: center;
+                margin-top: 20px;
+            }
+            h2 {
+                color: #333333;
+                font-size: 30px;
+                font-weight: 400;
+                margin-bottom: 20px;
+                @include breakpoint(medium) {
+                    font-size: 25px;
+                    margin-bottom: 10px;
+                }
+                @include breakpoint(small) {
+                    font-size: 20px;
+                }
+            }
+            p {
+                color: #626262;
+                font-size: 23px;
+                font-weight: 400;
+                @include breakpoint(medium) {
+                    font-size: 18px;
+                }
+                @include breakpoint(small) {
+                    font-size: 16px;
+                }
+            }
+            .white_paper_btn {
+                float: left;
+                width: 100%;
+                margin-top: 30px;
+                a {
+                    display: inline-block;
+                    &.blue_btn {
+                        font-size: 23px;
+                        padding: 6px 40px;
+                        &:hover, &:focus, &:active {
+                            border-color: $base;
+                        } 
+                        @include breakpoint(medium) {
+                            font-size: 18px;
+                            padding: 6px 30px;
+                        }
+                        @include breakpoint(small) {
+                            font-size: 16px;
+                        }                       
+                    }                    
+                }
+            }
+        }
+    }
+}
+
+.latest_news {
+    background-color: $base;
+    padding: 67px 0px;
+    h2 {
+        text-transform: uppercase;
+        color: $white;
+        font-size: 32px;
+        font-weight: 400;
+        text-align: center;
+    }
+    .News_block_container {
+        margin-top: 40px;
+        padding: 0;
+        .News_block {
+            @include breakpoint(medium) {
+                margin-bottom: 30px;
+            }
+            &:last-child {             
+                @include breakpoint(medium) {
+                    margin-bottom: 0px;
+                }   
+            }
+            .News_block_content {
+                .news_img_block_outer {
+                    height: 264px;                    
+                    overflow: hidden;
+                    width: 100%;
+                    @include breakpoint(medium) {
+                        height: 200px;
+                    }
+                }
+                .news_img_block {
+                    height: 100%;
+                    width: 100%;
+                    overflow: hidden;
+                    background-position: center;
+                    background-repeat: no-repeat;
+                    background-size: cover;
+                    @include transform(scale(1));
+                    @include transition(all ease 1s);                   
+                    &:hover, &:focus, &:active {
+                        @include transition(all ease 1s);
+                        @include transform(scale(1.5));
+                    }
+                }
+                .news_info_block {
+                    margin-top: 15px;
+                    h3 {
+                        color: $white;
+                        text-transform: uppercase;
+                        margin-bottom: 5px;
+                    }
+                    .edit_news {
+                        margin-bottom: 15px;
+                        .edit_icon {
+                            vertical-align: top;
+                            padding-right: 10px;
+                            width: 22px;
+                            height: 22px;
+                            cursor: pointer;
+                            i {
+                                color: $base;
+                                background-color: $white;
+                                width: 22px;
+                                height: 22px;
+                                display: flex;
+                                justify-content: center;
+                                align-items: center;
+                                text-align: center;
+                            }
+                        }
+                        .edit_info {
+                            color: #6bd1ff;
+                            font-size: 14px;
+                            text-transform: uppercase;                            
+                            span {
+                                &.white_txt {
+                                    color: $white;
+                                }
+                            }
+                        }
+                    }
+                    p {
+                        color: #6bd1ff;
+                        font-size: 15px;
+                        line-height: 20px;
+                    }
+                    .read_more {
+                        float: left;
+                        width: 100%;
+                        margin-top: 30px;
+                        a {
+                            display: inline-block;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.clients_review {
+    padding: 80px 0px;
+    @include breakpoint(small) {
+        padding: 40px 0px;
+    }
+    @include breakpoint(x-small) {
+        padding: 30px 0px;
+    }
+    h2 {
+        text-transform: uppercase;
+        font-weight: 300;
+    }
+    .twitter_reviews {
+        margin-top: 45px;
+    }
+    .twit_users {       
+        @include breakpoint(small) {
+            margin-bottom: 20px;
+        }
+        .twit_users_contnt {
+            border: solid 1px #ddd;
+            background-color: #f1f6fa;
+            @include border-radius(4px);
+            @include box-shadow(0px 0px 7px 0px rgba(0, 0, 0, 0.1));
+            padding: 15px;
+            position: relative;
+            padding-bottom: 50px;
+            @include breakpoint(x-small) {
+                padding-bottom: 15px;
+            }
+        }
+        .about_currency {
+            margin-bottom: 10px;
+            float: left;
+            width: 100%;
+            .about_currency_img {
+                width: 40px;
+            }
+            .about_currency_info {
+                padding-left: 10px;
+                .about_currency_info_block {
+                    .currency_left {
+                        h2 {
+                            font-size:18px;
+                            text-transform: none;
+                            font-weight: 600;
+                            color: #1a1f21;
+                        }
+                        p {
+                            font-size:15px;
+                            color: #63747f;
+                            line-height: 18px;
+                        }
+                    }
+                    .currency_right {
+                        text-align: right;
+                    }
+                }
+            }
+        }
+        .comments {
+            p {
+                color: #63747f;
+                font-size: 14px;
+                &.blue_txt {
+                    color: $base;                    
+                }
+                .blue_txt {
+                    color: $base;   
+                    &:hover, &:focus, &:active {
+                        color: #333;
+                    }                 
+                }
+            }
+        }
+        .likes_Sec {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            @include breakpoint(x-small) {
+                position: relative;                
+            }
+            ul {
+                padding: 0px 10px;
+                @include breakpoint(x-small) {
+                    padding: 0px;
+                }
+                li {
+                    display: inline-block;
+                    a {
+                        padding: 10px 6px;
+                        display: inline-block;
+                        color: #63747f;
+                        @include breakpoint(x-small) {
+                            padding: 0px;
+                        }
+                        .fa-info-circle {
+                            @include breakpoint(x-small) {
+                                padding: 0px 10px;
+                            }   
+                        }
+                    }
+                    &:last-child {
+                        float: right;
+                        @include breakpoint(x-small) {
+                            float: none;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.open_orders {
+    padding: 50px 15px;
+    .order_book_tabs {
+        background: #fff;
+        width: 100%;
+        @include border-radius(10px);
+        @include box-shadow(0px 0px 24px 0px rgba(2, 3, 3, 0.12));
+        position: relative;
+        .tab-container {
+            .nav-tabs {
+                display: block;
+                text-align: right;    
+                padding: 14px 30px;
+                padding-right: 204px;  
+                @include breakpoint(small) {
+                    padding: 14px;
+                    padding-right: 186px;  
+                }      
+                @media (max-width:559px) {
+                    padding-top: 0px;  
+                    padding-right: 14px;  
+                }    
+                .nav-item {   
+                    display: inline-block;  
+                    margin-right: 10px;
+                    &:last-child {
+                        margin-right: 0px;
+                    }               
+                    &:first-child {
+                        float: left;
+                        .nav-link {
+                            position: relative;
+                            padding-left: 40px;
+                            @include breakpoint(x-small) {
+                                padding-left: 34px;
+                            }
+                            &::before {
+                                background-image: url('../../../assets/images/favorite.png');
+                                @include image-2x('../../../assets/images/favorite.png', 100%, auto);
+                                width: 21px;
+                                height: 24px;
+                                display: inline-block;
+                                background-repeat: no-repeat;
+                                position: absolute;
+                                content: '';
+                                left: 12px;
+                                @include breakpoint(x-small) {
+                                    background-size: 100%;
+                                    width: 18px;
+                                    height: 18px;
+                                }
+                            }                            
+                        }
+                    }
+                    &.active {
+                        margin-bottom: 0;
+                        background-color: transparent;
+                    }
+                    .nav-link {
+                        @include border-radius(100px);
+                        background-color: #e3e3e3;
+                        padding: 6px 15px;
+                        display: inline-block;
+                        border: none;
+                        color: #626262;
+                        @include transition(all ease 0.4s);
+                        @include breakpoint(x-small) {
+                            font-size: 12px;
+                            padding: 4px 10px;
+                            line-height: 17px;
+                        }
+                        &:hover, &:focus, &:active {
+                            border: none;
+                            @include transition(all ease 0.4s);
+                            background-color: $base;
+                            color: $white;
+                            &::before {
+                                background-position: 0 -24px;
+                                @include breakpoint(x-small) {
+                                    background-position: 0 -21px;
+                                }
+                            }  
+                        }
+                        &.active {
+                            margin-bottom: 0;
+                            background-color: $base;
+                            color: $white;
+                            &::before {
+                                background-position: 0 -24px;
+                                @include breakpoint(x-small) {
+                                    background-position: 0 -21px;
+                                }
+                            }                            
+                        }
+                    }                    
+                }
+            }
+            .tab-content {
+                .tabs_table {
+                    .table {
+                        thead {
+                            th {
+                                border: none !important;
+                                color: #333333;
+                                background-color: #f6f6f6;
+                                font-size: 14px;
+                                .fa-long-arrow-up {
+                                    color:#0150af;
+                                }
+                                &:first-child {
+                                    padding-left: 30px;
+                                    @include breakpoint(small) {
+                                        padding-left: 10px;
+                                    }
+                                }
+                            }
+                        }
+                        tbody {
+                            tr {
+                                td {
+                                    color: #626262;
+                                    @include breakpoint(x-small) {
+                                        font-size: 14px;
+                                    }
+                                    &:first-child {
+                                        padding-left: 30px;
+                                        @include breakpoint(small) {
+                                            padding-left: 10px;
+                                        }
+                                    }                                    
+                                    .sml_star {
+                                        background-image: url('../../../assets/images/favorite_sml.png');
+                                        @include image-2x('../../../assets/images/favorite_sml.png', 100%, auto);
+                                        display: inline-block;
+                                        width: 16px;
+                                        height: 15px;
+                                        background-position: 0 0;
+                                        background-repeat: no-repeat;
+                                        margin-bottom: -2px;
+                                        cursor: pointer;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+.table_search {
+    position: absolute;
+    max-width: 160px;
+    width: 100%;
+    right: 30px;
+    top: 14px;
+    @include breakpoint(small) {
+        right: 14px;
+    }
+    @media (max-width:559px) {
+        position: relative;
+        max-width: 100%;
+        right: 0;
+        top: auto;
+        padding: 15px;        
+    }
+    .srch_icon {
+        position: absolute;
+        z-index: 2;
+        background-image: url('../../../assets/images/search.png');
+        @include image-2x('../../../assets/images/search.png', 15px, 15px);
+        display: inline-block;
+        width: 15px;
+        height: 15px;
+        top: 50%;
+        @include transform(translateY(-50%));
+        left: 12px;
+        @media (max-width:559px) { 
+            left: 27px;
+        }
+    }
+    input {
+        position: relative;
+        z-index: 0;
+        width: 100%;
+        border: solid 1px #ddd;
+        height: 32px;
+        @include border-radius(100px);
+        @include box-shadow(none);
+        padding: 0px 10px 0px 30px;
+        font-size: 14px;
+    }
+}
+
+
+
+/* modal style */
+.modal {
+    .modal-dialog {
+        height: 100%;
+        width: 100%;
+        max-width: 100%;
+        margin: 0px;
+        .modal-content {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            @include transform(translate(-50%, -50%));
+            max-width: 600px;
+            width: 100%;
+            @include breakpoint(small) {
+                width: 95%;
+            }
+            .modal-header {
+                .modal-title {
+                    line-height: 27px;
+                }
+            }
+        }
+    }
+}
+

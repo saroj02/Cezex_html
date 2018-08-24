@@ -1,0 +1,153 @@
+@import '../../../assets/scss/main.scss';
+
+.top_nav {    
+    padding: 15px;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    @include breakpoint(small) {
+        padding: 15px 0;
+    }
+    .logo  {
+        background-image: url('../../../assets/images/logo.png');
+        @include image-2x('../../../assets/images/logo.png', 100%, auto);
+        width: 137px;
+        height: 45px;
+        display: inline-block;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: 100%;
+        margin-bottom: -10px;
+        @include breakpoint(small) {
+            margin-left: 15px;
+            margin-right: 0px;
+        }
+    }
+    .navbar-toggler {
+        .navbar-toggler-icon {
+            @include breakpoint(small) {
+                margin-top: 5px;
+            }
+            .fa-navicon {
+                color: $white;
+            }
+        }
+    }
+    .navbar-collapse {
+        @include breakpoint(small) {
+            padding: 0px;
+            background-color: #10638f;
+            margin-top: 15px;   
+            & > ul {
+                & > li {
+                    border-bottom: solid 1px #0674b7;
+                    padding: 6px 15px;
+                }
+            }
+        }        
+    }
+}
+.left_nav {
+    li {
+        display: inline-block;
+        .btn-group {
+            @include breakpoint(small) {
+                width: 100%;
+                display: block;
+            }
+            .dropdown-toggle {
+                border: none;
+                background-color: transparent;
+                color: $white;
+                padding: 6px 15px;
+                position: relative;
+                @include breakpoint(small) {
+                    width: 100%;
+                    text-align: left;
+                    padding: 6px 0px;
+                }
+                &:after {
+                    display: inline-block;
+                    width: 0;
+                    height: 0;
+                    margin-left: 0.255em;
+                    margin-bottom: -2px;
+                    vertical-align: 0.255em;
+                    content: "";
+                    border-top: 7px solid $base;
+                    border-right: 5px solid transparent;
+                    border-bottom: 0;
+                    border-left: 5px solid transparent;
+                    @include breakpoint(small) {
+                        position: absolute;
+                        right: 0;
+                        top: 50%;
+                        @include transform(translateY(-50%));                        
+                        border-top: 7px solid $white;
+                        border-right: 5px solid transparent;
+                        border-bottom: 0;
+                        border-left: 5px solid transparent;
+                    }
+                }
+            }
+            .dropdown-menu {
+                padding: 0px;
+                li {
+                    display: inline-block;
+                    width: 100%;
+                    a {
+                        padding: 8px 15px;
+                        border-bottom: solid 1px #ddd;
+                    }
+                    &:last-child {
+                        a {
+                            border-bottom: none;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+.right_nav {
+    @include breakpoint(small) {
+        margin: 0px !important;
+    }
+    li {
+        display: inline-block;
+        @include breakpoint(small) {
+            width: 100%;
+        }
+        a {
+            display: inline-block;
+            line-height: 20px;
+            color: #849098;
+            font-size: 15px;
+            @include breakpoint(small) {
+                color: $white;
+                width: 100%;
+                padding:6px 0px;
+            }
+            &:hover, &:active, &:focus {
+                color: $base;
+            } 
+        }
+        &.login, &.signup {
+            a {
+                color: $white;
+                &:hover, &:active, &:focus {
+                    color: $base;
+                } 
+                &.blue_btn {
+                    @include breakpoint(small) {
+                        background: transparent;
+                        border: transparent;
+                    }
+                    &:hover, &:active, &:focus {
+                        color: $white;
+                    }                    
+                }
+            }
+        }
+    }
+}
