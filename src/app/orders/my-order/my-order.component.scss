@@ -1,0 +1,128 @@
+@import '../../../assets/scss/main.scss';
+
+.open_orders {
+    padding: 50px 0px;
+    @include breakpoint(small) {
+        padding: 25px 0px;
+    }
+    @include breakpoint(x-small) {
+        padding: 15px 0px;
+    }
+    .order_book_tabs {
+        background: #fff;
+        overflow: hidden;
+        width: 100%;
+        @include border-radius(10px);
+        @include box-shadow(0px 0px 24px 0px rgba(2, 3, 3, 0.12));
+        position: relative;
+        .tab-container {
+            .nav-tabs {
+                display: block;    
+                .nav-item {   
+                    display: inline-block;  
+                    &.active {
+                        margin-bottom: 0;
+                        background-color: transparent;
+                    }
+                    .nav-link {
+                        background-color: $white;
+                        padding:15px;
+                        display: inline-block;
+                        border: none;
+                        font-size: 20px;
+                        color: #626262;
+                        @include border-radius(0px);
+                        @include transition(all ease 0.4s);
+                        @include breakpoint(small) {
+                            font-size: 17px;
+                        }
+                        @include breakpoint(x-small) {
+                            font-size: 14px;
+                        }
+                        @media(max-width:360px){
+                            font-size: 12px;
+                            padding: 10px 8px;
+                            line-height: 17px;
+                        }
+                        &:hover, &:focus, &:active {
+                            border: none;
+                            @include transition(all ease 0.4s);
+                            background-color: $base;
+                            color: $white;
+                            &::before {
+                                background-position: 0 -24px;
+                                @include breakpoint(x-small) {
+                                    background-position: 0 -21px;
+                                }
+                            }  
+                        }
+                        &.active {
+                            margin-bottom: 0;
+                            background-color: $base;
+                            color: $white;
+                            &::before {
+                                background-position: 0 -24px;
+                                @include breakpoint(x-small) {
+                                    background-position: 0 -21px;
+                                }
+                            }                            
+                        }
+                    }                    
+                }
+            }
+            .tab-content {
+                .tabs_table {
+                    .table {
+                        thead {
+                            th {
+                                border: none !important;
+                                color: #333333;
+                                background-color: #f6f6f6;
+                                font-size: 14px;
+                                .fa-long-arrow-up {
+                                    color:#0150af;
+                                }
+                                &:first-child {
+                                    padding-left: 30px;
+                                    @include breakpoint(small) {
+                                        padding-left: 10px;
+                                    }
+                                }
+                            }
+                        }
+                        tbody {
+                            tr {
+                                td {
+                                    color: #626262;
+                                    border: none;
+                                    padding-top: 4px;                                    
+                                    padding-bottom: 4px;
+                                    @include breakpoint(x-small) {
+                                        font-size: 14px;
+                                    }
+                                    &:first-child {
+                                        padding-left: 30px;
+                                        @include breakpoint(small) {
+                                            padding-left: 10px;
+                                        }
+                                    }                                    
+                                    .sml_star {
+                                        background-image: url('../../../assets/images/favorite_sml.png');
+                                        @include image-2x('../../../assets/images/favorite_sml@2x.png', 100%, auto);
+                                        display: inline-block;
+                                        width: 16px;
+                                        height: 15px;
+                                        background-position: 0 0;
+                                        background-repeat: no-repeat;
+                                        margin-bottom: -2px;
+                                        cursor: pointer;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

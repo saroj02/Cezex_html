@@ -7,6 +7,7 @@ body {
 	background: $base2;
 	font-family: $base-font;
 	margin: 0px;
+	padding-top: 72px;
 	min-height:100vh;
 	height:100%;
 	overflow-x:hidden;
@@ -14,6 +15,9 @@ body {
  	-moz-osx-font-smoothing: grayscale; 	
   	-ms-overflow-style: scrollbar;
 	@include transition(all 0.5s ease 0s);	
+	&.home {
+		padding-top: 0;
+	}
 }
 
 .btn.active:focus, .btn.focus:active, .btn:active:focus, .btn:focus {

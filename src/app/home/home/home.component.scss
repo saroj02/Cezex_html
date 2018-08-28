@@ -1,6 +1,10 @@
 @import '../../../assets/scss/main.scss';
-@import "~owl.carousel/dist/assets/owl.carousel.css";
-@import "~owl.carousel/dist/assets/owl.theme.default.css";
+
+.home {
+    .top_nav {
+        background-color: transparent;
+    }
+}
 .banner {
     background-image: url('../../../assets/images/banner_img.jpg');
     background-size: cover;
@@ -396,7 +400,7 @@
                             }
                             &::before {
                                 background-image: url('../../../assets/images/favorite.png');
-                                @include image-2x('../../../assets/images/favorite.png', 100%, auto);
+                                @include image-2x('../../../assets/images/favorite@2x.png', 100%, auto);
                                 width: 21px;
                                 height: 24px;
                                 display: inline-block;
@@ -490,7 +494,7 @@
                                     }                                    
                                     .sml_star {
                                         background-image: url('../../../assets/images/favorite_sml.png');
-                                        @include image-2x('../../../assets/images/favorite_sml.png', 100%, auto);
+                                        @include image-2x('../../../assets/images/favorite_sml@2x.png', 100%, auto);
                                         display: inline-block;
                                         width: 16px;
                                         height: 15px;
@@ -528,7 +532,7 @@
         position: absolute;
         z-index: 2;
         background-image: url('../../../assets/images/search.png');
-        @include image-2x('../../../assets/images/search.png', 15px, 15px);
+        @include image-2x('../../../assets/images/search@2x.png', 15px, 15px);
         display: inline-block;
         width: 15px;
         height: 15px;

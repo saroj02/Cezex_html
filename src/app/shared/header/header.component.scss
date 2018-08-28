@@ -1,35 +1,44 @@
 @import '../../../assets/scss/main.scss';
 
 .top_nav {    
-    padding: 15px;
-    position: absolute;
+    padding: 10px 15px;
+    position: absolute !important;
     top: 0;
     width: 100%;
+    background-color: #1c2d3a;
     @include breakpoint(small) {
         padding: 15px 0;
     }
     .logo  {
         background-image: url('../../../assets/images/logo.png');
-        @include image-2x('../../../assets/images/logo.png', 100%, auto);
+        @include image-2x('../../../assets/images/logo@2x.png', 100%, auto);
         width: 137px;
         height: 45px;
         display: inline-block;
         background-position: center;
         background-repeat: no-repeat;
         background-size: 100%;
-        margin-bottom: -10px;
+        margin-bottom: 0px;
         @include breakpoint(small) {
             margin-left: 15px;
             margin-right: 0px;
         }
     }
     .navbar-toggler {
+        &.collapsed {
+            @include breakpoint(small) {
+                padding: 0px;
+            }
+        }
         .navbar-toggler-icon {
             @include breakpoint(small) {
                 margin-top: 5px;
             }
             .fa-navicon {
                 color: $white;
+                @include breakpoint(small) {
+                    margin-top: 2px;
+                }
             }
         }
     }
@@ -42,6 +51,8 @@
                 & > li {
                     border-bottom: solid 1px #0674b7;
                     padding: 6px 15px;
+                    float: left;
+                    width: 100%;
                 }
             }
         }        
@@ -113,10 +124,37 @@
     @include breakpoint(small) {
         margin: 0px !important;
     }
+    &.my-2 {
+        @include breakpoint(small) {
+            margin: 0px !important;
+        }
+    }
+    &.my-md-0 {
+        @include breakpoint(small) {
+            margin: 0px !important;
+        }
+    }
     li {
         display: inline-block;
         @include breakpoint(small) {
             width: 100%;
+        }
+        &.userprofile {
+            padding: 0px 15px;
+            position: relative;
+            @include breakpoint(small) {
+                display: none;
+            }
+            &::before {
+                position: absolute;
+                left: 15px;
+                top: 50%;
+                @include transform(translateY(-50%));
+                background-color: #495761;
+                height: 23px;
+                width: 1px;
+                content: '';
+            }
         }
         a {
             display: inline-block;
@@ -149,5 +187,154 @@
                 }
             }
         }
+        .btn-group {
+            @include breakpoint(small) {
+                display: block;                
+            }
+            .dropdown-toggle {
+                @include breakpoint(small) {
+                    width: 100%;
+                    float: left;
+                }
+            }
+            .dropdown-menu {
+                @include breakpoint(small) {
+                    position: relative;
+                    width: 100%;
+                    background-color: #147cb3;
+                    @include border-radius(0);
+                    border: none;
+                    @include box-shadow(none);
+                    li {
+                        a {
+                            border-color:#116b9b;
+                            color: #51ccff;
+                            &:hover, &:focus, &:active {
+                                background-color:#116b9b;
+                            }
+                        }
+                    }
+                }
+            }
+        }
     }
+}
+
+.btn-group {
+    @include breakpoint(small) {
+        width: 100%;
+        display: block;
+    }
+    .Profile_img {
+        width: 39px;
+        height: 39px;
+        @include border-radius(100%);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        display: inline-block;
+        overflow: hidden;
+    }
+    .dropdown-toggle {
+        border: none;
+        background-color: transparent;
+        color: $white;
+        padding: 6px 15px;
+        position: relative;
+        line-height: 16px;
+        @include breakpoint(small) {
+            width: 100%;
+            text-align: left;
+            padding: 6px 15px 6px 0px;            
+        }
+        &:after {
+            display: inline-block;
+            width: 0;
+            height: 0;
+            margin-left: 0.255em;
+            margin-bottom: -2px;
+            vertical-align: 0.255em;
+            content: "";
+            border-top: 7px solid $base;
+            border-right: 5px solid transparent;
+            border-bottom: 0;
+            border-left: 5px solid transparent;
+            position: absolute;
+            top: 52%;
+            right: -3px;
+            @include transform(translateY(-50%));
+            @include breakpoint(small) {
+                position: absolute;
+                right: 0;
+                top: 50%;
+                @include transform(translateY(-50%));                        
+                border-top: 7px solid $white;
+                border-right: 5px solid transparent;
+                border-bottom: 0;
+                border-left: 5px solid transparent;
+            }
+        }
+    }
+    .dropdown-menu {
+        padding: 0px;
+        @include breakpoint(small) {
+            right: 0 !important;
+            left: auto !important;
+        }
+        li {
+            display: inline-block;
+            width: 100%;
+            a {
+                padding: 8px 15px;
+                border-bottom: solid 1px #ddd;
+            }
+            &:last-child {
+                a {
+                    border-bottom: none;
+                }
+            }
+        }
+    }
+}
+.mob_show {
+    position: absolute;
+    right: 55px;
+    display: none;
+    top: 2px;
+    @include breakpoint(small) {
+        display: block;
+    } 
+    &.my-2 {
+        @include breakpoint(small) {
+            margin: 0px !important;
+        }
+    }
+    &.my-md-0 {
+        @include breakpoint(small) {
+            margin: 0px !important;
+        }
+    }
+    ul {
+        li {            
+            position: relative;
+            .btn-group {
+                .dropdown-toggle {        
+                    @include breakpoint(small) {
+                        padding-bottom: 0 !important;
+                        padding-top: 0 !important;
+                    }
+                    .Profile_img {
+                        @include breakpoint(small) {
+                            margin-right: 20px;
+                        }
+                    }
+                }
+            }
+        }
+    }   
+}
+.dropdown-item:hover, .dropdown-item:focus, .dropdown-item:active {
+    color: #16181b;
+    text-decoration: none;
+    background-color: #f8f9fa;
 }

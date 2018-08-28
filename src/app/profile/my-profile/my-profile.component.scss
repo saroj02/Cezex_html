@@ -1,0 +1,194 @@
+@import '../../../assets/scss/main.scss';
+
+.my_profile {
+    padding: 55px 0px;
+    .setting_blocks {
+        background-color: $white;
+        @include border-radius(20px);
+        overflow: hidden;
+        @include box-shadow(0px 0px 24px 0px rgba(2, 3, 3, 0.12));
+        margin-bottom: 35px;
+        &.change_pass {
+            .setting_title {
+                background-color: $white;
+                border: none;
+                .setting_title_left {
+                    padding: 20px 30px;
+                    h3 {
+                        padding: 0;
+                    }
+                }
+                .setting_title_right {
+                    padding: 20px 30px;
+                    .blue_btn {
+                        cursor: pointer;
+                        &:hover, &:focus, &:active {
+                            cursor: pointer;
+                            border-color:$base;
+                        }
+                    }
+                }
+            }    
+        }
+        .setting_title {
+            background-color: #f6f6f6;
+            border-bottom: solid 1px #dbdee1;
+            h3 {
+                font-size: 25px;
+                color: #333333;
+                padding: 20px 30px;
+                @include breakpoint(small) {
+                    font-size: 18px;
+                }
+                @include breakpoint(x-small) {
+                    font-size: 15px; 
+                    padding: 15px;
+                }
+                .auncements_icon {
+                    margin-right: 10px;
+                    background-image: url('../../../assets/images/auncements.png');
+                    @include image-2x('../../../assets/images/auncements@2x.png', 100%, auto);
+                    width: 24px;
+                    height: 24px;
+                    display: inline-block;
+                    background-position: 0 0;
+                    background-repeat: no-repeat;
+                    margin-bottom: -3px;
+                }
+            }
+        }
+        .setting_body {            
+            padding: 20px 30px;
+            min-height: 130px;            
+            @include breakpoint(x-small) {
+                padding: 15px;
+            }
+            .email {
+                font-size: 17px;
+                color: #333333;
+                margin-bottom: 10px;
+                
+                @include breakpoint(small) {
+                    font-size: 15px;
+                }
+                @include breakpoint(x-small) {
+                    font-size: 14px;
+                }
+                span {
+                    &.user_icon {
+                        margin-right: 10px;
+                        background-image: url('../../../assets/images/user_icon.png');
+                        @include image-2x('../../../assets/images/user_icon@2x.png', 100%, auto);
+                        width: 24px;
+                        height: 24px;
+                        display: inline-block;
+                        background-position: 0 0;
+                        background-repeat: no-repeat;
+                        margin-bottom: -3px;
+                    }
+                }
+            }
+            p {
+                color: #999999;
+                font-size: 17px;
+                
+                @include breakpoint(small) {
+                    font-size: 15px;
+                }
+                @include breakpoint(x-small) {
+                    font-size: 14px;
+                }
+            }
+            .two_factor_auth {
+                .two_factor_auth_left {
+                    p {
+                        color: #626262;
+                    }
+                }
+                .two_factor_auth_right {
+                    .blue_btn {
+                        cursor: pointer;
+                        &:hover, &:focus, &:active {
+                            cursor: pointer;
+                            border-color:$base;
+                        }
+                    }
+                }
+            }
+            .upload_doc_sec {
+                @include breakpoint(medium) {
+                    margin-bottom: 15px;
+                }
+                .upload_doc {
+                    border: solid 1px #dbdee1;
+                    @include border-radius(10px);
+                    padding: 20px;
+                    @include breakpoint(x-small) {
+                        padding: 15px;
+                    }
+                    .unverified {
+                        font-size: 17px;
+                        color: #333333;
+                        margin-bottom: 5px;
+                
+                        @include breakpoint(small) {
+                            font-size: 15px;
+                        }
+                        @include breakpoint(x-small) {
+                            font-size: 14px;
+                        }
+                        .cross {
+                            background-color: $base;
+                            color: $white;
+                            width: 33px;
+                            height: 33px;
+                            @include border-radius(100px);
+                            text-align: center;
+                            display: inline-flex;
+                            justify-content: center;
+                            align-items: center;
+                            margin-right: 10px;
+                            i {
+                                font-size: 28px;
+                                margin-top: -5px;
+                            }
+                        }
+                    }
+                    h3 {
+                        color: #333333;
+                        font-size: 17px;
+                        margin-bottom: 5px;
+                
+                        @include breakpoint(small) {
+                            font-size: 15px;
+                        }
+                        @include breakpoint(x-small) {
+                            font-size: 14px;
+                        }
+                        span {
+                            font-weight: 600;
+                        }
+                    }
+                    p {
+                        color: #626262;
+                        font-size: 17px;
+                        margin-bottom: 5px;
+                
+                        @include breakpoint(small) {
+                            font-size: 15px;
+                        }
+                        @include breakpoint(x-small) {
+                            font-size: 14px;
+                        }
+                    }
+                    .blue_btn {
+                        margin-top: 10px;
+                        &:hover, &:focus, &:active {
+                            border-color:$base;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,142 @@
+@import '../../../assets/scss/main.scss';
+
+.login_container {
+    padding: 125px 15px;
+    .container {
+        max-width: 672px;
+        margin: 0 auto;
+        float: none;
+        display: table;
+    }
+    .signin {
+        position: relative;
+        margin-bottom: 100px;  
+        h1 {
+            font-size: 43px;
+            color: $base;   
+            text-transform: uppercase;  
+            font-weight: 400;   
+            @include breakpoint(small) {
+                font-size: 33px;
+            }  
+            @include breakpoint(x-small) {
+                font-size: 25px;
+            }
+        }
+        p {
+            color: #626262;
+            font-size: 19px;
+            @include breakpoint(small) {
+                font-size: 17px;
+            }
+            @include breakpoint(x-small) {
+                font-size: 15px;
+            }
+        }
+        .login_block {
+            background-color: $white;
+            @include box-shadow(1px 5px 16px 0px rgba(0, 0, 0, 0.17));
+            @include border-radius(20px);
+            padding: 30px;
+            position: relative;
+            z-index: 0; 
+            display: inline-block;
+            width: 100%;
+            margin: 100px 0px 0px;       
+            .login_circle {
+                width: 138px;
+                height: 138px;
+                background-color: $white;
+                @include box-shadow(0px -10px 5px 0px rgba(0, 0, 0, 0.02));
+                @include border-radius(100%);
+                position: absolute;
+                z-index: 2;
+                top: -60px;
+                left: 50%;
+                @include transform(translateX(-50%));
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                .login_icon {
+                    background-image: url('../../../assets/images/login_img.png');
+                    @include image-2x('../../../assets/images/login_img@2x.png', 100%, auto);
+                    width: 64px;
+                    height: 58px;
+                    display: inline-block;
+                    background-position: 0 0;
+                    background-repeat: no-repeat;
+                    background-size: 100%;
+                }
+            }
+            .login_block_contnt {
+                margin: 50px 0px;
+                .form-group {
+                    text-align: left;
+                    margin-bottom: 20px;
+                    width: 100%;
+                    float: left;
+                    .forgot_pass {
+                        float: left;
+                        width: 100%;
+                        position: relative;
+                        .forgot {
+                            position: absolute;
+                            top: 50%;
+                            right: 15px;
+                            @include transform(translateY(-50%));
+                            i {
+                                font-size: 20px;
+                                color: $base;
+                            }
+                        }
+                    }
+                    label {
+                        width: 100%;
+                        float: left;
+                        margin-bottom: 4px;
+                        color: #333333;
+                        font-size: 15px;
+                    }
+                    .signin_btn {
+                        background-color: #0072ba;
+                        color: $white;
+                        border: solid 1px #0072ba;
+                        width: 100%;
+                        padding: 10px 15px;
+                        display: inline-block;
+                        text-align: center;
+                        font-size: 15px;
+                        @include border-radius(4px);
+                        @include transition(all ease 0.4s);
+                        &:hover, &:focus, &:active {
+                            @include transition(all ease 0.4s);
+                            color: #0072ba;
+                            background-color: $white;
+                        }
+                    }
+
+                }
+            }
+        }      
+        .already_account {
+            margin-top: 30px;
+            p {
+                color: #626262;
+                font-size: 18px;                
+                @include breakpoint(x-small) {
+                    font-size: 15px;
+                }
+                a {
+                    color: #333333;
+                    font-size: 18px;                
+                    @include breakpoint(x-small) {
+                        font-size: 15px;
+                    }
+                    &:hover, &:focus, &:active {
+                        color: $base;
+                    }
+                }
+            }
+        }  
+    }    
+}

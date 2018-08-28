@@ -1,9 +1,24 @@
-<nav class="navbar navbar-expand-md top_nav fixed-top">
+<nav class="navbar navbar-expand-md top_nav fixed-top" id="mynav">
   <div class="container">
-    <a class="navbar-brand logo" href="#"></a>
+    <a class="navbar-brand logo" href="/"></a>
     <button class="navbar-toggler collapsed" type="button" (click)="isCollapsed = !isCollapsed" aria-expanded="false">
       <span class="navbar-toggler-icon"><i class="fa fa-navicon"></i></span>
     </button>
+    <ul class="mob_show my-2 my-md-0 ">
+      <li>
+        <div class="btn-group" dropdown>
+          <button id="button-basic" dropdownToggle type="button" class="dropdown-toggle" aria-controls="dropdown-basic">
+            <span class="Profile_img" style="background-image: url('../../../assets/images/profile.png');"></span>
+            <span class="caret"></span>
+          </button>
+          <ul id="dropdown-basic" *dropdownMenu class="dropdown-menu"  role="menu" aria-labelledby="button-basic">
+            <li role="menuitem"><a class="dropdown-item" href="javascript:void(0)"><i class="fa fa-gear"></i>  Setting</a></li>
+            <li role="menuitem" routerLink="/profile"><a class="dropdown-item" href="javascript:void(0)"><i class="fa fa-user"></i> Profile</a></li>
+            <li role="menuitem"><a class="dropdown-item" href="javascript:void(0)"><i class="fa fa-sign-out"></i> Logout</a></li>
+          </ul>
+        </div>
+      </li>
+    </ul>
 
     <div class="collapse navbar-collapse" id="navbarsExample02" [class.collapse]="isCollapsed">
       <ul class="navbar-nav mr-auto left_nav">
@@ -16,20 +31,7 @@
               <option value="4">Punjabi</option>
               <option value="5">Japanise</option>
             </select>
-          </div>  
-          <!-- <div class="btn-group" dropdown>
-            <button id="button-basic" dropdownToggle type="button" class="dropdown-toggle" aria-controls="dropdown-basic">
-              English <span class="caret"></span>
-            </button>
-            <ul id="dropdown-basic" *dropdownMenu class="dropdown-menu"
-                role="menu" aria-labelledby="button-basic">
-              <li role="menuitem"><a class="dropdown-item" href="javascript:void(0)">Hindi</a></li>
-              <li role="menuitem"><a class="dropdown-item" href="javascript:void(0)">Urdu</a></li>
-              <li role="menuitem"><a class="dropdown-item" href="javascript:void(0)">Punjabi</a></li>
-              <li role="menuitem"><a class="dropdown-item" href="javascript:void(0)">Japanise</a>
-              </li>
-            </ul>
-          </div> -->
+          </div>           
         </li>
       </ul>
       <ul class="my-2 my-md-0 right_nav">
@@ -39,11 +41,38 @@
         <li class="nav-item">
           <a class="nav-link" href="javascript:void(0)">Support</a>
         </li>
+        <!--/after login menus start-->
+        <li>
+          <div class="btn-group" dropdown>
+            <button id="button-basic" dropdownToggle type="button" class="dropdown-toggle" aria-controls="dropdown-basic">
+              History <span class="caret"></span>
+            </button>
+            <ul id="dropdown-basic" *dropdownMenu class="dropdown-menu"  role="menu" aria-labelledby="button-basic">
+              <li role="menuitem"><a class="dropdown-item" href="javascript:void(0)" routerLink="/orders/">My Orders</a></li>
+              <li role="menuitem"><a class="dropdown-item" href="javascript:void(0)" routerLink="/orders/open-orders">Open Orders</a></li>
+              <li role="menuitem"><a class="dropdown-item" href="javascript:void(0)" routerLink="/orders/order-history">Order History</a></li>
+            </ul>
+          </div>
+        </li>
+        <li class="userprofile">
+          <div class="btn-group" dropdown>
+            <button id="button-basic" dropdownToggle type="button" class="dropdown-toggle" aria-controls="dropdown-basic">
+              <span class="Profile_img" style="background-image: url('./assets/images/profile.png');"></span>
+              <span class="caret"></span>
+            </button>
+            <ul id="dropdown-basic" *dropdownMenu class="dropdown-menu"  role="menu" aria-labelledby="button-basic">
+              <li role="menuitem"><a class="dropdown-item" href="javascript:void(0)"><i class="fa fa-gear"></i>  Setting</a></li>
+              <li role="menuitem"><a class="dropdown-item" href="javascript:void(0)" routerLink="/profile"><i class="fa fa-user"></i> Profile</a></li>
+              <li role="menuitem"><a class="dropdown-item" href="javascript:void(0)" routerLink="/"><i class="fa fa-sign-out"></i> Logout</a></li>
+            </ul>
+          </div>
+        </li>
+        <!--/after login menus end-->
         <li class="nav-item login">
-          <a class="nav-link blue_btn" href="javascript:void(0)">Login</a>
+          <a class="nav-link blue_btn" href="javascript:void(0)" routerLink="/user/login">Login</a>
         </li>
         <li class="nav-item signup">
-          <a class="nav-link" href="javascript:void(0)">Sign up</a>
+          <a class="nav-link" href="javascript:void(0)" routerLink="/user/register">Sign up</a>
         </li>
       </ul>
     </div>
